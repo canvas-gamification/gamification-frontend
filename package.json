@@ -12,6 +12,8 @@
     "node": ">=18.17.0"
   },
   "dependencies": {
+    "flowbite": "^2.0.0",
+    "flowbite-react": "^0.6.4",
     "next": "14.0.1",
     "preline": "^1.9.0",
     "react": "^18",

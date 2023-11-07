@@ -5,14 +5,14 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   darkMode: 'media',
   theme: {
-    extend: {},
+    extend: {}
   },
   plugins: [
-    require("flowbite/plugin"),
-  ],
+    require('flowbite/plugin')
+  ]
 }
 export default config

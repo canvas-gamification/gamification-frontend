@@ -1,9 +1,9 @@
-"use client"
-import {Avatar, Dropdown, Navbar} from 'flowbite-react'
+'use client'
+import { Avatar, Dropdown, Navbar } from 'flowbite-react'
 
 export const NavbarComponent = () => {
-    return (
-        <Navbar fluid>
+  return (
+    <Navbar fluid>
       <Navbar.Brand href="/">
         <img src="/logo.jpg" className="rounded-full first-letter:mr-3 h-6 sm:h-9" alt="Course Gamification Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Course Gamification</span>
@@ -39,5 +39,5 @@ export const NavbarComponent = () => {
         <Navbar.Link href="#">Contact Us</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
-    )
+  )
 }

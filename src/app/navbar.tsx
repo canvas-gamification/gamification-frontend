@@ -1,11 +1,12 @@
 'use client'
 import { Avatar, Dropdown, Navbar } from 'flowbite-react'
+import Image from 'next/image'
 
 export const NavbarComponent = () => {
   return (
     <Navbar fluid>
       <Navbar.Brand href="/">
-        <img src="/logo.jpg" className="rounded-full first-letter:mr-3 h-6 sm:h-9" alt="Course Gamification Logo" />
+        <Image src="/logo.jpg" className="rounded-full first-letter:mr-3 h-6 sm:h-9" alt="Course Gamification Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Course Gamification</span>
       </Navbar.Brand>
       <div className="flex md:order-2">

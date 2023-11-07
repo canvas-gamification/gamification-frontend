@@ -27,5 +27,7 @@ module.exports = {
   rules: {
     "react/jsx-indent": ["error", 2],
     "@typescript-eslint/explicit-function-return-type": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
   }
 };

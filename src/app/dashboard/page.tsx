@@ -1,5 +1,3 @@
-
-
-export default () => {
-    return <>Gavs</>
+export default function DashboardPage () {
+  return <>Gavs</>
 }

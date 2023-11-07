@@ -6,8 +6,8 @@ export const NavbarComponent = () => {
   return (
     <Navbar fluid>
       <Navbar.Brand href="/">
-        <Image src="/logo.jpg" className="rounded-full first-letter:mr-3 h-6 sm:h-9" alt="Course Gamification Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Course Gamification</span>
+        <Image src="/logo.jpg" width={36} height={36} className="rounded-full mr-3 sm:h-9" alt="Coursewise Logo" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Coursewise</span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Dropdown

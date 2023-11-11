@@ -1,8 +1,12 @@
 'use client'
+import { useAuthUser } from '@/hooks/useAuthUser'
 import { Avatar, Dropdown, Navbar } from 'flowbite-react'
 import Image from 'next/image'
 
 export const NavbarComponent = () => {
+  const { user } = useAuthUser()
+  // TODO: use user here
+  console.debug(user?.username)
   return (
     <Navbar fluid>
       <Navbar.Brand href="/">

@@ -1,7 +1,8 @@
 {
   "cSpell.words": [
     "Coursewise",
-    "Gamification"
+    "Gamification",
+    "signup"
   ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true

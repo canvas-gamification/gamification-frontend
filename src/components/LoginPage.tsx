@@ -7,7 +7,7 @@ import Link from 'next/link'
 const LoginPage = () => {
   const { trigger: login } = useLogin()
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = (data: FormData) => {
     const email = data.get('email') as string
     const password = data.get('password') as string
 

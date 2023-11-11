@@ -4,6 +4,7 @@ import './globals.css'
 import { NavbarComponent } from '@/components/NavbarComponent'
 import { SWRProvider } from '@/providers/swr-provider'
 import { UserProvider } from '@/providers/user-provider'
+import { ToastContainer } from 'react-toastify'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout ({
       <UserProvider>
         <html lang="en">
           <body className={inter.className}>
+            <ToastContainer theme='dark' />
             <header>
               <NavbarComponent />
             </header>

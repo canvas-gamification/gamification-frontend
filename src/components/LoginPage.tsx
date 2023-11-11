@@ -2,17 +2,29 @@
 import { useLogin } from '@/hooks/api/useLogin'
 import { TextInput, Button } from 'flowbite-react'
 import Image from 'next/image'
+import { toast } from 'react-toastify'
 import Link from 'next/link'
+import { useAuthUser } from '@/hooks/useAuthUser'
+import { useRouter } from 'next/navigation'
 
 const LoginPage = () => {
-  const { trigger: login } = useLogin()
+  const { trigger: login, isMutating } = useLogin()
+  const { setUser } = useAuthUser()
+  const { push } = useRouter()
 
   const onSubmit = (data: FormData) => {
     const email = data.get('email') as string
     const password = data.get('password') as string
 
     if (email && password) {
-      login({ username: email, password }).then(data => { console.debug(data) }).catch(data => { console.debug(data) })
+      login({ username: email, password })
+        .then(data => {
+          setUser(data)
+          push('/')
+        })
+        .catch(() => {
+          toast.error('Login failed')
+        })
     }
   }
 
@@ -37,7 +49,7 @@ const LoginPage = () => {
               <TextInput type="password" name="password" id="password" placeholder="••••••••" required />
             </div>
 
-            <Button type="submit" className="w-full">Login</Button>
+            <Button type="submit" className="w-full" isProcessing={isMutating}>Login</Button>
             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
               Don&apos;t have an account? <Link href="/account/signup" className='font-medium text-blue-600 dark:text-blue-500 hover:underline'>Sign up here</Link>
             </p>

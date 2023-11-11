@@ -14,14 +14,18 @@ export const useMutation = <DataType, ArgType>(options: MutationProps<DataType, 
   return useSWRMutation<DataType, any, any, ArgType>(
     BASE_URL + url,
     async (url: string, { arg }: { arg: ArgType }) => {
-      return await fetch(url, {
+      const response = await fetch(url, {
         method,
         body: JSON.stringify(arg),
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-      }).then(async res => await res.json())
+      })
+      if (!response.ok) {
+        throw new Error(response.statusText)
+      }
+      return await response.json()
     },
     config,
   )

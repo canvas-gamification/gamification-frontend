@@ -29,5 +29,6 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/strict-boolean-expressions": "off",
   }
 };
